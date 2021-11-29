@@ -124,4 +124,7 @@ export default {
   'main.utility.formSuccessTitle': 'Спасибо за выбор Riderra!',
   'main.utility.formSuccessText': 'Мы выслали вам на почту ваучер с подтверждением заказа.',
   'main.utility.formSuccessHome': 'На главную',
+  'main.utility.autopark.title': 'Автопарк?',
+    'main.utility.autopark.first': 'Подключайтесь к облачной диспетчерской системе: водительское приложение, распределение заказов, управление ценами - всё в одном месте.',
+  'main.utility.autopark.secondary': 'API интеграция с любым партнёром, будь то корпоративный заказчик, CRM, база данных. Доступ к глобальной партнёрской сети и тысячам заказов по всему миру.'
 }

@@ -9,7 +9,6 @@
     <reviews></reviews>
     <partners></partners>
     <questions></questions>
-
     <section class="site-section site-section--pf">
       <form-feedback :data="formData"></form-feedback>
     </section>
@@ -27,9 +26,11 @@ import reviews from '~/components/main/reviews.vue'
 import partners from '~/components/main/partners.vue'
 import questions from '~/components/main/questions.vue'
 import formFeedback from '~/components/partials/form.vue'
+import Autopark from "@/components/main/autopark";
 
 export default {
   components: {
+    Autopark,
     maps, mainSection, sectionFirst, sectionCities, sectionCars, reviews, partners, questions, formFeedback
   },
   data(){
