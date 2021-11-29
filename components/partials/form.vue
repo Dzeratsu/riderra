@@ -95,9 +95,6 @@
         </div>
       </div>
     </form>
-    <h2 class="h2 site-section__title">{{$tc('main.utility.autopark.title')}}</h2>
-    <p>{{$tc('main.utility.autopark.first')}}</p>
-    <p>{{$tc('main.utility.autopark.secondary')}}</p>
   </div>
 </template>
 

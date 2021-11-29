@@ -130,5 +130,6 @@ export default {
   'main.utility.formSuccessHome': 'Startseite',
   'main.utility.autopark.title': 'Flotte von Pkw, Kleinbussen oder Bussen?',
   'main.utility.autopark.first': 'Stellen Sie eine Verbindung zum Cloud-Dispatcher her. Dieses System beinhaltet: Fahrer-App, Auftragsverteilung, Preisverwaltung - alles an einem Ort.',
-  'main.utility.autopark.secondary': 'API-Integration mit jedem Partner, sei es ein Unternehmenskunden, CMR oder Datenbank. Zugriff auf ein globales Affiliate-Netzwerk und Tausende von Bestellungen auf der ganzen Welt.'
+  'main.utility.autopark.secondary': 'API-Integration mit jedem Partner, sei es ein Unternehmenskunden, CMR oder Datenbank. Zugriff auf ein globales Affiliate-Netzwerk und Tausende von Bestellungen auf der ganzen Welt.',
+  'main.utility.autopark.button': 'Jetzt kostenlos testen!'
 }

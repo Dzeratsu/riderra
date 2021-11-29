@@ -128,5 +128,6 @@ export default {
   'main.utility.formSuccessHome': 'Home Page',
   'main.utility.autopark.title': 'Own Fleet?',
   'main.utility.autopark.first': 'Get connected to cloud-based dispatch system: driver app, auto-dispatch, pricing management – all in one place',
-  'main.utility.autopark.secondary': 'API integration with any partner, be it a corporate customer, CRM, any other software. Access to the global partner network and thousands of bookings globally.'
+  'main.utility.autopark.secondary': 'API integration with any partner, be it a corporate customer, CRM, any other software. Access to the global partner network and thousands of bookings globally.',
+  'main.utility.autopark.button': 'Start Your Free Trial!'
 }
