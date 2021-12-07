@@ -245,7 +245,8 @@ export default {
           journey: journey,
           pHours: this.orderData.hours,
           pService: this.$store.state.current.service_id,
-          pDate: this.orderData["day_start]"]+" "+this.orderData.time,
+/*          pDate: this.orderData["day_start]"]+" "+this.orderData.time,*/
+          pDate: this.orderData.time,
           pPremise: this.orderData.from,
 
           pLat: coords.plat,
@@ -275,7 +276,7 @@ export default {
         if (res.data.Success) {
           console.log("Sending Success")
           localStorage.setItem(res.data.Data,JSON.stringify(data))
-          //if (this.paymentType === "card") {
+          if (this.paymentType === "card") {
             localStorage.setItem(res.data.Data,JSON.stringify(data))
             const link = this.getPayseraLink(res.data.Data, data);
             console.log(link);
@@ -283,13 +284,54 @@ export default {
               console.log("Go to PaySera...")
               window.location.href = link;
             }
-         // }
-        } else {
-          alert(res.data.Message);
+          }else {
+            let terminal = '1616156141122DEMO'
+            let pass = 'uwk8z3mj8sm887w4'
+            let object = {
+              "TerminalKey": terminal,
+              "Amount": data.pPrice * 86,
+              "OrderId": data.Extras,
+              "Description": "Поездка от " + data.pPremise + ' до ' + data.dPremise,
+              "DATA": {
+                "Phone": data.Passengers[2],
+                "Email":  data.Passengers[0]
+              }
+            }
+            const config = {
+              headers: {
+                "Content-type": "application/json; charset=UTF-8",
+              },
+            }
+            this.$axios.post('https://securepay.tinkoff.ru/new/TxiCTzVQ', object, config)
+              .then((res)=> {
+              const link = res.data.PaymentURL
+              window.location.href = link;
+              })
+        }
         }
       });
     },
-
+    tinkoff() {
+      let terminal = '1616156141122DEMO'
+      let pass = 'uwk8z3mj8sm887w4'
+      let object = {
+        "TerminalKey": terminal,
+        "Amount": data.pPrice,
+        "OrderId": data.Extras,
+        "Description": "Поездка от" + data.pPremise + ' до ' + data.dPremise,
+        "DATA": {
+          "Phone": data.Passengers[2],
+          "Email":  data.Passengers[0]
+        }
+      }
+      const config = {
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      }
+    this.$axios.post('https://securepay.tinkoff.ru/new/TxiCTzVQ', object, config)
+      .then((res)=> console.log(res.data))
+    },
     getExstras (id, count) {
       var result="";
       for (var i=0; i<count; i++) {

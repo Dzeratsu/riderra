@@ -27,13 +27,6 @@
             <div class="payment__title" v-html="tab.title"></div>
             <div class="payment__descr" v-html="tab.desc"></div>
           </div>
-          <div class="payment__item" :class="{active: paymentType === tab.name}" v-for="(tab, i) in tabs" :key="i" @click="toggleTab(tab)">
-    ОПЛАТА ТИНЬКОВ
-
-            <div class="payment__title" v-html="tab.title"></div>
-            <div class="payment__descr" v-html="tab.desc"></div>
-          </div>
-
         </div>
       </div>
       <div class="payment__content">
@@ -87,12 +80,12 @@
         },
         currentTab: null,
         tabs:[
-         /* {
+          {
             class: 'payment__icon--cash',
             title: this.$tc('main.utility.cash'),
             desc:  this.$tc('main.utility.pay_at_end'),
-            name: 'cash'
-          },*/
+            name: 'card2'
+          },
           {
             class: 'payment__icon--card',
             title: this.$tc('main.utility.online'),
