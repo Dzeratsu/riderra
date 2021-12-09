@@ -1,3 +1,4 @@
+<script src="../../assets/ecosystem.config.js"></script>
 <template>
   <section class="main-section ">
     <div class="main-section__video">

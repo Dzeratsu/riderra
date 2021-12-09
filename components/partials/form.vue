@@ -289,9 +289,10 @@ export default {
               "Phone": data.Passengers[0].pPhone,
               "Email":  data.Passengers[0].pEmail
             }*/
-            let object = {
+         this.$axios.get('https://api.coingate.com/v2/rates/merchant/EUR/RUB').then((res)=> {
+               let object = {
               "TerminalKey": '1616156141122DEMO',
-              "Amount": data.pPrice * 86 + '00',
+              "Amount": data.pPrice * res.data * 100,
               "OrderId": data.Extras,
               "Description": "Поездка от " + data.pPremise + ' до ' + data.dPremise,
  /*             "DATA": JSON.stringify(info)*/
@@ -304,8 +305,9 @@ export default {
             this.$axios.post('https://securepay.tinkoff.ru/v2/Init', JSON.stringify(object), config)
               .then((res)=> {
               const link = res.data.PaymentURL
-                window.location.href = link;
+             /*   window.location.href = link;*/
               })
+         })
         }
         }
       });
@@ -313,9 +315,10 @@ export default {
     tinkoff() {
       let terminal = '1616156141122DEMO'
       let pass = 'uwk8z3mj8sm887w4'
+
       let object = {
         "TerminalKey": terminal,
-        "Amount": data.pPrice,
+        "Amount": data.pPrice * EUR,
         "OrderId": data.Extras,
         "Description": "Поездка от" + data.pPremise + ' до ' + data.dPremise,
         "DATA": {

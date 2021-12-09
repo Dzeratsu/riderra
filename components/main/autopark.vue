@@ -19,7 +19,7 @@ export default {
 <style scoped>
 .btn {
 display: flex;
-  justify-content: right;
+  justify-content: left;
 }
 button {
   min-width: 300px;
