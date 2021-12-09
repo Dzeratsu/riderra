@@ -2,10 +2,10 @@
 <template>
   <section class="main-section ">
     <div class="main-section__video">
-<!--      <video loop="" muted="" autoplay="" playsinline=""
+      <video loop="" muted="" autoplay="" playsinline=""
              poster="/img/main_bg.jpg" class="main-section__bg-video" ref="video">
         <source src="/video/main-video.mp4" type="video/mp4">
-      </video>-->
+      </video>
     </div>
 
     <div class="main-section__content container">
