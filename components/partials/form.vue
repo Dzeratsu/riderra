@@ -217,7 +217,7 @@ export default {
           accepturl: process.env.baseUrl+"/success",
           cancelurl: process.env.baseUrl+"?pay=cancel&order="+id,
           callbackurl: process.env.baseUrl+"/api/updateBooking?paysera=1&orderdata="+order_r,
-          test: 1,
+          test: 0,
         },
       paysera = new Paysera(options),
       params = {
@@ -305,7 +305,7 @@ export default {
             this.$axios.post('https://securepay.tinkoff.ru/v2/Init', JSON.stringify(object), config)
               .then((res)=> {
               const link = res.data.PaymentURL
-             /*   window.location.href = link;*/
+                window.location.href = link
               })
          })
         }

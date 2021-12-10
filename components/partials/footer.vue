@@ -54,14 +54,9 @@
 
       </div>
       <div class="col-sm-4 col-xs-12 col-sm-push-1 made-by">
-        <span style="font-size: 18px"> <a href="https://awem.pro/">developed by awem</a></span>
+        <span style="font-size: 18px"> <a href="https://awem.pro/" target="blank">developed by awem</a></span>
 
-<!--        <a href="https://serenity.agency/">
-        <svg class="made-by__logo" width="104" height="28" viewBox="0 0 104 28" fill="none"
-             xmlns="http://www.w3.org/2000/svg">
-          <use xlink:href="/sprite.svg#serenity"></use>
-        </svg>
-      </a>-->
+
       </div>
     </div>
   </footer>
