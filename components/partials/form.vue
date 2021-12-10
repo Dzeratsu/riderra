@@ -289,10 +289,10 @@ export default {
               "Phone": data.Passengers[0].pPhone,
               "Email":  data.Passengers[0].pEmail
             }*/
-         this.$axios.get('https://api.coingate.com/v2/rates/merchant/EUR/RUB').then((res)=> {
+        /* this.$axios.get('https://api.coingate.com/v2/rates/merchant/EUR/RUB').then((res)=> {*/
                let object = {
               "TerminalKey": '1616156141122DEMO',
-              "Amount": data.pPrice * res.data * 100,
+              "Amount": data.pPrice * 82.7 * 100,
               "OrderId": data.Extras,
               "Description": "Поездка от " + data.pPremise + ' до ' + data.dPremise,
  /*             "DATA": JSON.stringify(info)*/
@@ -307,7 +307,7 @@ export default {
               const link = res.data.PaymentURL
                 window.location.href = link
               })
-         })
+        /* })*/
         }
         }
       });
