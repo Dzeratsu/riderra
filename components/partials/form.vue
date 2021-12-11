@@ -313,7 +313,7 @@ export default {
       });
     },
     tinkoff() {
-      let terminal = '1616156141122DEMO'
+      let terminal = '1616156141122'
       let pass = 'uwk8z3mj8sm887w4'
 
       let object = {

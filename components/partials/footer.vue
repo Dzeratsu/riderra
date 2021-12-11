@@ -42,7 +42,7 @@
     </div>
     <div class="row footer__bottom">
       <div class="col-sm-3 col-xs-12 footer__copyright">
-        © 2012-2020 Riderra
+        © 2012-{{year.getFullYear()}} Riderra
       </div>
       <div class="col-sm-4 col-xs-12 money-operators">
         <img class="money-operators__item" src="/img/cards/visa.svg" alt="">
@@ -71,6 +71,7 @@
     },
     data(){
       return {
+        year: new Date(),
         langData: {
           class: 'blue'
         }
